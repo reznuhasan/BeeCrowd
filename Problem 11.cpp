@@ -12,6 +12,4 @@ int main(){
     float price2=y*z;
     float total=price1+price2;
     cout<<fixed<<setprecision(2)<<"VALOR A PAGAR: R$ "<<total<<endl;
-
-
 }
