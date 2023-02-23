@@ -14,5 +14,9 @@ int main(){
         cout<<"Q3"<<endl;
     }else if(x<0 && y>0){
         cout<<"Q2"<<endl;
+    }else if((y==0 && x>0) || (y==0 && x<0)){
+        cout<<"Eixo X"<<endl;
+    }else if((x==0 && y>0) || (x==0 && y<0)){
+        cout<<"Eixo Y"<<endl;
     }
 }
