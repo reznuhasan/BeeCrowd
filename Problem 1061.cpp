@@ -9,11 +9,16 @@ int main(){
     cin>>t>>fday;
     cin>>fhr>>t>>fm>>t>>fs;
 
+//    start day
     int start_day=d;
+//  calculate starting time in second
     int start_time=(hr*3600)+(m*60)+s;
+//  finish day
     int finish_day=fday;
+//  calculate finish time in second
     int finish_time=(fhr*3600)+(fm*60)+fs;
     int total_time=0;
+    //when starting time greater then finish time
     if(start_time>finish_time){
        int dur=(24*3600)-start_time;
        total_time=dur+finish_time;
@@ -27,8 +32,8 @@ int main(){
     int spent_min=total_time/60;
     total_time%=60;
     int spent_sec=total_time;
-    cout<<spent_day<<endl;
-    cout<<spent_hour<<endl;
-    cout<<spent_min<<endl;
-    cout<<spent_sec<<endl;
+    cout<<spent_day<<" dia(s)"<<endl;
+    cout<<spent_hour<<" hora(s)"<<endl;
+    cout<<spent_min<<" minuto(s)"<<endl;
+    cout<<spent_sec<<" segundo(s)"<<endl;
 }
