@@ -5,7 +5,7 @@ int main(){
     int n=6;
     int res=0;
     float avg=0;
-    for(int i=0;i<6;i++){
+    for(int i=0;i<n;i++){
         float num;
         cin>>num;
         if(num>=0){

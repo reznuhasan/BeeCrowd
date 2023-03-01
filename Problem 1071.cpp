@@ -16,7 +16,6 @@ int main(){
     int sum=0;
     for(int i=min+1;i<max;i++){
         if(i%2!=0){
-            cout<<i<<endl;
             sum=sum+i;
         }
     }
