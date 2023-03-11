@@ -1,47 +1,92 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int main(){
+int main()
+{
     int space=0;
-    while(1){
+    while(1)
+    {
         int n;
         cin>>n;
-        if(n==0){
+        if(n==0)
+        {
             break;
         }
-        if(n>1 && n%2==0){
+        if(n>1 && n%2==0)
+        {
             space=n/2;
-        }else if(n>1 && n%2==1){
+        }
+        else if(n>1 && n%2==1)
+        {
             space=(n/2)+1;
         }
 
         long long int arr[n][n];
         int flag=1;
-        for(int i=0;i<n;i++){
+        for(int i=0; i<n; i++)
+        {
             int check=flag;
-            for(int j=0;j<n;j++){
+            for(int j=0; j<n; j++)
+            {
                 arr[i][j]=check;
                 check*=2;
             }
             flag*=2;
         }
 
-        for(int i=0;i<n;i++){
-            for(int j=0;j<n;j++){
-                if(j==0){
-                    for(int k=1;k<space;k++){
-                        cout<<" ";
-                    }
-                    cout<<arr[i][j];
-                }else{
-//                   for(int k=0;k<space;k++){
-//                        cout<<"%";
-//                    }
-                    cout<<" "<<setw(space)<<arr[i][j];
+        for(int i=0; i<n; i++)
+        {
+            for(int j=0; j<n; j++)
+            {
+                if(n==1)printf("%lld",arr[i][j]);
+                else if(n==2)
+                {
+                    if(j==0)printf("%lld",arr[i][j]);
+                    else printf(" %lld",arr[i][j]);
                 }
-
+                else if(n==3 || n==4)
+                {
+                    if(j==0)printf(" %lld",arr[i][j]);
+                    else printf("%3lld",arr[i][j]);
+                }
+                else if(n==5)
+                {
+                    if(j==0)printf("%3lld",arr[i][j]);
+                    else printf("%4lld",arr[i][j]);
+                }
+                else if(n==6 || n==7)
+                {
+                    if(j==0)printf("%4lld",arr[i][j]);
+                    else printf("%5lld",arr[i][j]);
+                }
+                else if(n==8 || n==9)
+                {
+                    if(j==0)printf("%5lld",arr[i][j]);
+                    else printf("%6lld",arr[i][j]);
+                }
+                else if(n==10)
+                {
+                    if(j==0)printf("%6lld",arr[i][j]);
+                    else printf("%7lld",arr[i][j]);
+                }
+                else if(n==11 || n==12)
+                {
+                    if(j==0)printf("%7lld",arr[i][j]);
+                    else printf("%8lld",arr[i][j]);
+                }
+                else if(n==13 || n==14)
+                {
+                    if(j==0)printf("%8lld",arr[i][j]);
+                    else printf("%9lld",arr[i][j]);
+                }
+                else if(n==15)
+                {
+                    if(j==0)printf("%9lld",arr[i][j]);
+                    else printf("%10lld",arr[i][j]);
+                }
             }
-            cout<<endl;
+            printf("\n");
         }
+        printf("\n");
     }
 }
